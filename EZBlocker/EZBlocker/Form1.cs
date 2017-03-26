@@ -410,7 +410,10 @@ namespace EZBlocker
 
         private void Notify(String message)
         {
-            NotifyIcon.ShowBalloonTip(10000, "EZBlocker", message, ToolTipIcon.None);
+            if (systrycheck.Checked == true)
+            {
+                NotifyIcon.ShowBalloonTip(10000, "EZBlocker", message, ToolTipIcon.None);
+            }
         }
 
         private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
